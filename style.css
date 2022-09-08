@@ -1,0 +1,26 @@
+body{
+    text-align: center; 
+    color:pink;
+    background-color: cornflowerblue;
+    font-size:x-large;
+}
+
+input,label{
+    padding:1rem;
+    width: 20%;
+    display: block;  
+    margin: auto;
+    border-radius: 0.5rem;
+    border-color: pink;
+    margin-top: 1rem;
+    font-size: large;
+}
+
+#show-button{
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    border:none;
+    color: cornflowerblue;
+    background-color: pink;
+    font-size: large;
+}
