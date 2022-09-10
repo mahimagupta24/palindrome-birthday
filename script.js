@@ -58,8 +58,8 @@ function reverseStr(str) {
     }
       return flag;
     }
-  // var date={day:10,month:10,year:2020}
-  // console.log(checkPalindromeForAllDateFormats(date))
+  // var date={day:2,month:1,year:2020}
+  //  console.log(checkPalindromeForAllDateFormats(date))
     function isLeapYear(year) {
       if (year % 400 === 0) {
         return true;
@@ -72,11 +72,11 @@ function reverseStr(str) {
       }
       return false;
     }
-  // var year=2020;
-  // console.log(isLeapYear(year))
+  //  var year=2020;
+  //  console.log(isLeapYear(year))
   
     function getNextDate(date) {
-      var day = date.day + 1;
+      var day = date.day+1;
       var month = date.month;
       var year = date.year;
   
@@ -112,6 +112,8 @@ function reverseStr(str) {
         year: year
       }
     }
+    // date={day:25,month:2,year:2020}
+    // console.log(getNextDate(date))
   
     function getNextPalindromeDate(date) {
       var ctr = 0;
@@ -133,30 +135,26 @@ function reverseStr(str) {
       var year = date.year;
   
       var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-      if (month === 3) {
-        if (isLeapYear(year)) {
-          if (day < 1) {
-            day = 29;
+      if (day === 0) {
             month--;
-          }
-        }
-        else {
-          if (day <1) {
-            day = 28;
-            month--;
-          }
-        }
-      }
-      else {
-        if (day <  1) {
-          month--;
-          if(month<1){
+       
+          if (month===0) {
+            month = 12;
+            day=31;
             year--;
           }
-          day=daysInMonth[month-1];
-        }
+      else if(month===2){
+         if(isLeapYear(year)){
+          day=29;
+         }
+      else{
+        day=28;
       }
-      
+    }
+        else{
+          day=daysInMonth[month-1]  
+        }
+      } 
   
       return {
         day: day,
@@ -177,7 +175,8 @@ function reverseStr(str) {
       }
             return [ctr, previousDate];
   }
-  
+  //var previousDate={day:25,month:2,year:2020}
+  // console.log (getPreviousPalindromeDate(ctr,previousDate))
   
     var inputDate = document.querySelector("#date-of-birth")
     var showButton = document.querySelector("#show-button")
