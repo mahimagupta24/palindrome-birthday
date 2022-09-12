@@ -200,7 +200,7 @@ function reverseStr(str) {
         }else{  
       var [nextDateCount,nextDate]=getNextPalindromeDate(date)
           var[previousDateCount,previousDate]=getPreviousPalindromeDate(date)
-          getMessage.innerText=`The next palindrome date is ${nextDate.day}/${nextDate.month}/${nextDate.year}, you missed it by ${nextDateCount} days.The previous palindrome date was ${previousDate.day}/${previousDate.month}/${previousDate.year}, you missed it by ${previousDateCount} days`
+          getMessage.innerText=`The next nearest palindrome date is ${nextDate.day}/${nextDate.month}/${nextDate.year}, you missed it by ${nextDateCount} days.The previous nearest palindrome date was ${previousDate.day}/${previousDate.month}/${previousDate.year}, you missed it by ${previousDateCount} days`
        }
       }
   
