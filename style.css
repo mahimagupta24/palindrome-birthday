@@ -44,3 +44,23 @@ li {
     background-color: pink;
     font-size: large;
 }
+footer {
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer p{
+  text-align:center;
+  font-size: xx-large;
+}
+img{
+  width:40px;
+}
+a,
+img,
+li {
+display: inline;
+padding: 0.2rem;
+
+}
