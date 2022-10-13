@@ -1,3 +1,9 @@
+var inputDate = document.querySelector("#date-of-birth")
+var showButton = document.querySelector("#show-button")
+var getMessage = document.querySelector("#message")
+
+showButton.addEventListener('click', clickHandler);
+
 function reverseStr(str) {
     var ListOfChar = str.split("")
     var reverseListOfChar = ListOfChar.reverse()
@@ -76,7 +82,7 @@ function reverseStr(str) {
   //  console.log(isLeapYear(year))
   
     function getNextDate(date) {
-      var day = date.day+1;
+      var day = date.day + 1;
       var month = date.month;
       var year = date.year;
   
@@ -178,10 +184,7 @@ function reverseStr(str) {
   //var previousDate={day:25,month:2,year:2020}
   // console.log (getPreviousPalindromeDate(ctr,previousDate))
   
-    var inputDate = document.querySelector("#date-of-birth")
-    var showButton = document.querySelector("#show-button")
-    var getMessage = document.querySelector("#message")
-      showButton.addEventListener('click', clickHandler);
+  
   
     function clickHandler() {
       var bdayStr = inputDate.value;
